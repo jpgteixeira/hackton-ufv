@@ -1,26 +1,24 @@
 @import "tailwindcss";
 
+/* 1. Definimos apenas as cores fixas que você quer usar */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
 }
+
+/* 2. Removemos o bloco @media (prefers-color-scheme: dark) 
+   para garantir que o sistema não inverta nada. */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Courier Prime", monospace; /* Ajustado para a fonte de computação */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 3. Forçamos o estilo no body */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-mono); /* Aplica a fonte de computação globalmente */
 }
