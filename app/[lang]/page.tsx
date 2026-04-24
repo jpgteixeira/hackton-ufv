@@ -126,7 +126,7 @@ export default async function Home({ params }: { params: { lang: 'pt' | 'en' } }
       {/* Resumo */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
         <div>
-          <h1 className="text-4xl font-bold mb-4 uppercase tracking-widest font-mono">{t.title}</h1>
+          <h1 className="md:text-4xl text-xl font-bold mb-4 uppercase tracking-widest font-mono">{t.title}</h1>
           <p className="text-lg leading-relaxed">
             {t.subtitle}
           </p>
@@ -171,9 +171,9 @@ export default async function Home({ params }: { params: { lang: 'pt' | 'en' } }
       </section>
 
       {/* Partners */}
-      <section className='mt-15 flex flex-col justify-between items-center'>
+      <section className='mt-15 flex flex-col w-full justify-between items-center'>
         <span className='mb-4 font-bold uppercase text-xl'>{t.partners}</span>
-        <div className="flex justify-evenly flex-grow">
+        <div className="flex flex-col md:flex-row justify-evenly flex-grow ">
           {["ppg", "ppggm", "tecnoparq", "genmelhor", "ccb", "cca"].map((logoNum) => (
             <div key={logoNum} className="relative w-24 h-24">
               <Image
