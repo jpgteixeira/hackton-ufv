@@ -91,7 +91,7 @@ export default async function Home({ params }: { params: { lang: 'pt' | 'en' } }
               ))}
             </div>
           </div>
-        </div>🏆
+        </div>
       </section>
       <section className='mb-6 text-justify flex flex-col'>
         <span className='mb-6'>{t.history1}</span>
