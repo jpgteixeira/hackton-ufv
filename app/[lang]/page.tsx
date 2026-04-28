@@ -8,10 +8,11 @@ const dict = {
     detailsTitle: "Resumindo pra você",
     location: "LOCAL: IDATA - UFV - Brasil",
     date: "DATA: 26 a 28 de Maio, 2026",
-    prizes: "PRIZES:",
-    prize1: "💻 Ipad",
-    prize2: "⌚ Apple Watch",
-    prize3: "🧱 Lego",
+    prizes: "PRÊMIOS PARA OS 1ºS, 2ºS E 3ºS LUGARES.",
+    prizess: "Oportunidade de ganhar apple watches ⌚, legos 🧱, ipads 💻 e mais!",
+    prize1: "",
+    prize2: "",
+    prize3: "",
     partners: "Parceiros",
     history1: "Em 2026, a UFV celebra seu centenário de excelência e pioneirismo. Em perfeita sintonia, o Programa de Pós-Graduação em Genética e Melhoramento completa 50 anos — meio século de sucessos seguidos dedicados à história desta universidade. Tem até logo comemorativa, olha só!",
     history2: "Para celebrar este marco, propomos um desafio que olha para o futuro: o UFV Hackathon 2026. É o momento de unir o nosso legado acadêmico com a agilidade da tecnologia para solucionar os desafios da próxima geração."
@@ -23,12 +24,13 @@ const dict = {
     detailsTitle: "To make lon story short",
     location: "LOCATION: IDATA - UFV - Brazil",
     date: "DATE: May 26th to  28th, 2026",
-    prizes: "PRIZES:",
-    prize1: "💻 Ipad",
-    prize2: "⌚ Apple Watch",
-    prize3: "🧱 Lego",
+    prizes: "PRIZES FOR 1ºS, 2ºS AND 3ºS PLACES.",
+    prizess: "Opportunity to win apple watches ⌚, legos 🧱 , ipads 💻 and more!",
+    prize1: "",
+    prize2: "",
+    prize3: "",
     partners: "Partners",
-    history1: "In 2026, the Federal University of Viçosa (UFV) celebrates its centenary of excellence and pioneering spirit. In perfect harmony, the Graduate Program in Genetics and Breeding marks its 50th anniversary—a half-century of dedication, accompanying half of this university's history with cutting-edge science. We even have a commemorative logo, check it out!",
+    history1: "In 2026, the Federal University of Viçosa (UFV) celebrates its century of excellence and pioneering spirit. In perfect harmony, the Graduate Program in Genetics and Breeding marks its 50th anniversary—a half-century of dedication, accompanying half of this university's history with cutting-edge science. We even have a commemorative logo, check it out!",
     history2: "To commemorate this milestone, we propose a challenge that looks ahead: the UFV Hackathon 2026. It is time to unite our academic legacy with the agility of technology to solve the challenges of the next generation."
 
   }
@@ -139,6 +141,7 @@ export default async function Home({ params }: { params: { lang: 'pt' | 'en' } }
             <li><span >📍 {t.location}</span></li>
             <li><span >📅 {t.date}</span></li>
             <li><span >🏆 {t.prizes}</span></li>
+            <li className='bg-red-200 p-2 border'><span className='bg-red-2'>{t.prizess}</span></li>
           </ul>
           <div className="flex items-end justify-between gap-2 h-32 mt-4 border-black pb-1">
 

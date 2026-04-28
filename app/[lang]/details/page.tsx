@@ -9,19 +9,20 @@ const dict = {
     whoWeAreText: "Conectamos o legado de inovação da UFV com o poder da computação em nuvem e ferramentas de dados de ponta. Nosso objetivo é criar um ambiente onde a mágica acontece: a intersecção entre sólido conhecimento acadêmico e tecnologias líderes de mercado.",
     whatWillYouDoTitle: "O que você fará?",
     whatWillYouDoText: "Liberte sua criatividade e resolva problemas do mundo real. Você terá 20 horas para testar a plataforma, superar seus limites e sonhar com novos recursos. Tudo isso com suporte total para transformar suas ideias em realidade.",
-    reqTitle: "Requisitos",
+    reqTitle: "Requisitos (não obrigatórios)",
     reqItems: [
       "Experiência em desenvolvimento de software ou ciência de dados.",
       "Disponibilidade total durante o evento.",
       "Abertura para colaboração multidisciplinar.",
-      "Tamanho da equipe: 4 pessoas.",
-      "Vagas extremamente limitadas (50 participantes)."
+      "Tamanho da equipe: 5 pessoas por grupo.",
+      "Vagas extremamente limitadas - 50 participantes (10 grupos)."
     ],
     prizesTitle: "Premiação",
+    prizesDescription:"Prêmios diversos que, com certeza, contribuirão com o seu dia a dia, seja no trabalho ou na diversão. Serão diferentes tipos de LEGO®, Apple Watches, iPads e muito mais!",
     prizesData: [
-      { place: "1º", value: "01 iPad potente - use para trabalho e lazer, pois ninguém é de ferro", color: "bg-yellow-500" },
-      { place: "2º", value: "01 apple watch para você acompanhar seus exercícios", color: "bg-gray-400" },
-      { place: "3º", value: "01 conjunto de lego para exercitar a mente", color: "bg-orange-700" }
+      { place: "1º", value: "", color: "bg-yellow-500" },
+      { place: "2º", value: "", color: "bg-gray-400" },
+      { place: "3º", value: "0", color: "bg-orange-700" }
     ],
     placeLabel: "Lugar"
   },
@@ -33,19 +34,20 @@ const dict = {
     whoWeAreText: "We bridge UFV's legacy of innovation with the power of cloud computing and cutting-edge data tools. Our goal is to create an environment where the magic happens: the intersection between solid academic knowledge and market-leading technologies.",
     whatWillYouDoTitle: "What will you do?",
     whatWillYouDoText: "Unleash your creativity and solve real-world problems. You will have 20 hours to test the platform, push your boundaries, and dream about new features. All of this with full support to turn your ideas into reality.",
-    reqTitle: "Requirements",
+    reqTitle: "Nice-to-have",
     reqItems: [
       "Experience in software development or data science.",
       "Full availability during the event.",
       "Openness to multidisciplinary collaboration.",
-      "Team size: 4 people.",
-      "Extremely limited spots (50 participants)."
+      "Team size: 5 people.",
+      "Extremely limited spots - 50 participants (10 groups total)."
     ],
-    prizesTitle: "Premiação",
+    prizesTitle: "Prizes",
+    prizesDescription:"Amazing prizes that will upgrade your daily routine, from work to play! Prizes include LEGO® sets, Apple Watches, iPads, and more.",
     prizesData: [
-     { place: "1st", value: "01 powerful iPad - for work and leisure, because you need some downtime", color: "bg-yellow-500" },
-      { place: "2nd", value: "01 Apple Watch to keep track of your workouts", color: "bg-gray-400" },
-      { place: "3rd", value: "01 LEGO set to exercise your mind", color: "bg-orange-700" }
+     { place: "1st", value: "", color: "bg-yellow-500" },
+      { place: "2nd", value: "", color: "bg-gray-400" },
+      { place: "3rd", value: "", color: "bg-orange-700" }
     ],
     placeLabel: "Place"
   }
@@ -79,6 +81,7 @@ export default async function DetailsPage({ params }: { params: { lang: 'pt' | '
 
       <section className="border-t border-black pt-8">
   <h2 className="text-xl font-bold mb-6 uppercase tracking-widest text-center">{t.prizesTitle}</h2>
+  <p className="leading-relaxed text-justify text-center mb-6">{t.prizesDescription}</p>
   
   {/* Container do Pódio */}
   <div className="flex flex-row items-end justify-center gap-2 h-[450px] md:h-[400px] border-b-2 border-black pb-2">

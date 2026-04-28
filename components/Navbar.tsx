@@ -22,17 +22,31 @@ export default function Navbar() {
     {/* LOGO IDATA */}
     <div className="relative w-24 h-12">
       <a href="https://idata.ufv.br/" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
-        <Image src="/logos/logo-idata.webp" alt="Logo IData" fill sizes="96px" style={{ objectFit: 'contain' }} />
+        <Image src="/logos/logo-ufv.webp" alt="Logo IData" fill sizes="96px" style={{ objectFit: 'contain' }} />
       </a>
     </div>
 
+    <div className="relative w-24 h-12">
+      <a href="https://ppg.ufv.br/" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
+        <Image src="/logos/logo-ppg.webp" alt="Logo PPG-UFV" fill sizes="96px" style={{ objectFit: 'contain' }} />
+      </a>
+    </div>
     {/* LOGO UFV (AGORA AQUI) */}
     <div className="relative w-24 h-12">
       <a href="https://www.ufv.br/" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
-        <Image src="/logos/logo-ufv.webp" alt="Logo UFV" fill sizes="96px" style={{ objectFit: 'contain' }} />
+        <Image src="/logos/logo-idata.webp" alt="Logo UFV" fill sizes="96px" style={{ objectFit: 'contain' }} />
+      </a>
+    </div>
+
+    <div className="relative w-24 h-12">
+      <a href="https://www.bayer.com.br/pt/" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
+        <Image src="/logos/logo_bayer.webp" alt="Logo Bayer" fill sizes="96px" style={{ objectFit: 'contain' }} />
       </a>
     </div>
   </div>
+
+   
+
 
   {/* NAVEGAÇÃO */}
   <nav className="flex flex-wrap justify-center items-center gap-4 md:gap-8 uppercase tracking-widest text-lg md:text-xl">

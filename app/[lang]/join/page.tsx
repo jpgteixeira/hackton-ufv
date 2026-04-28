@@ -4,12 +4,17 @@ const dict = {
   pt: {
     title: "INSCRIÇÃO & CONTEÚDO",
     restrictedArea: "Área Restrita!",
-    accessButton: "ACESSAR CONTEÚDO"
+    accessButton: "ACESSAR CONTEÚDO",
+    registrationInformation:"Devido ao número limitado de vagas, realizaremos um processo de seleção. Solicitamos que responda às perguntas com cuidado, pois o seu perfil e motivação serão fundamentais para a nossa avaliação.",
+    registrationInformationTitle:"IMPORTANTE"
+
   },
   en: {
     title: "REGISTRATION & CONTENT",
     restrictedArea: "Restricted Area!",
-    accessButton: "ACCESS CONTENT"
+    accessButton: "ACCESS CONTENT",
+    registrationInformation:"Registration is limited and subject to a selection process. Please ensure you provide thoughtful responses, as your answers will play a key role in our evaluation of candidates.",
+    registrationInformationTitle:"IMPORTANT"
   }
 };
 
@@ -22,6 +27,10 @@ export default async function JoinPage({ params }: { params: { lang: 'pt' | 'en'
       <h1 className="text-3xl font-bold mb-8 uppercase tracking-widest border-b border-black pb-4">
         {t.title}
       </h1>
+      <div className="p-4 mb-8 text-justify bg-red-200 border border-black">
+        <p className="font-bold text-center text-lg">{t.registrationInformationTitle}</p>
+        <p >{t.registrationInformation}</p>
+      </div>
 
       <div className="mb-12">
         <iframe 
