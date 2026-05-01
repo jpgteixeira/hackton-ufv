@@ -3,35 +3,37 @@ import Image from 'next/image';
 const dict = {
   pt: {
     organizedBy: "Organizado por",
-    title: "UFV Hackathon 2026",
+    title: "UFV-BAYER Hackathon 2026",
     subtitle: "Inovação na intersecção de dados, tecnologia e melhoramento genético.",
     detailsTitle: "Resumindo pra você",
     location: "LOCAL: IDATA - UFV - Brasil",
     date: "DATA: 26 a 28 de junho, 2026",
     prizes: "PRÊMIOS PARA OS 1ºS, 2ºS E 3ºS LUGARES.",
-    prizess: "Oportunidade de ganhar apple watches ⌚, legos 🧱, ipads 💻 e mais!",
+    prizess: "Oportunidade de ganhar diversos prêmios, incluindo Apple Watches ⌚, Legos 🧱, Ipads 💻 e muito mais!",
     prize1: "",
     prize2: "",
     prize3: "",
     partners: "Parceiros",
-    history1: "Em 2026, a UFV celebra seu centenário de excelência e pioneirismo. Em perfeita sintonia, o Programa de Pós-Graduação em Genética e Melhoramento completa 50 anos — meio século de sucessos seguidos dedicados à história desta universidade. Tem até logo comemorativa, olha só!",
-    history2: "Para celebrar este marco, propomos um desafio que olha para o futuro: o UFV Hackathon 2026. É o momento de unir o nosso legado acadêmico com a agilidade da tecnologia para solucionar os desafios da próxima geração."
+    history1: "Em 2026, a UFV celebra seu centenário de excelência e pioneirismo. Em perfeita sintonia, o Programa de Pós-Graduação em Genética e Melhoramento completa 50 anos — meio século de sucessos seguidos dedicados à história desta universidade.",
+    history2: "Tem até logo comemorativa, olha só!",
+    history3: "Para celebrar este marco, propomos um desafio que olha para o futuro: o UFV Hackathon 2026. É o momento de unir o nosso legado acadêmico com a agilidade da tecnologia para solucionar os desafios da próxima geração."
   },
   en: {
     organizedBy: "Organized by",
-    title: "UFV Hackathon 2026",
+    title: "UFV-BAYER Hackathon 2026",
     subtitle: "Unleashing innovation at the intersection of data, technology, and plant breeding.",
-    detailsTitle: "To make lon story short",
+    detailsTitle: "To make a long story short",
     location: "LOCATION: IDATA - UFV - Brazil",
-    date: "DATE: May 26th to  28th, 2026",
-    prizes: "PRIZE June FOR 1ºS, 2ºS AND 3ºS PLACES.",
-    prizess: "Opportunity to win apple watches ⌚, legos 🧱 , ipads 💻 and more!",
+    date: "DATE: June 26th to  28th, 2026",
+    prizes: "PRIZE FOR 1ºS, 2ºS AND 3ºS PLACES.",
+    prizess: "A chance to win awesome prizes like Apple Watches, Lego, iPads, and much more! ⌚ 🧱  💻 "  ,
     prize1: "",
     prize2: "",
     prize3: "",
     partners: "Partners",
-    history1: "In 2026, the Federal University of Viçosa (UFV) celebrates its century of excellence and pioneering spirit. In perfect harmony, the Graduate Program in Genetics and Breeding marks its 50th anniversary—a half-century of dedication, accompanying half of this university's history with cutting-edge science. We even have a commemorative logo, check it out!",
-    history2: "To commemorate this milestone, we propose a challenge that looks ahead: the UFV Hackathon 2026. It is time to unite our academic legacy with the agility of technology to solve the challenges of the next generation."
+    history1: "In 2026, the Federal University of Viçosa (UFV) celebrates a century of excellence and pioneering spirit. In perfect harmony, the Graduate Program in Genetics and Breeding marks its 50th anniversary. Together, these milestones highlight a remarkable moment for the program and the university. Over five decades, the program has contributed to the university's history through cutting-edge Science.",
+    history2: "We even have a commemorative logo, check it out!",
+    history3: "To commemorate this milestone, we propose a challenge that looks ahead: the UFV Hackathon 2026. It is time to unite our academic legacy with the agility of technology to solve the challenges of the next generation."
 
   }
 };
@@ -64,39 +66,44 @@ export default async function Home({ params }: { params: { lang: 'pt' | 'en' } }
             <h3 className="text-xs font-mono uppercase tracking-widest text-center mb-6 border-b border-black pb-2">
               {t.organizedBy}
             </h3>
+<div className="flex justify-center w-full py-6">
+  
+  {/* Container do Bloco: Define uma largura para que os itens alinhem à esquerda entre si */}
+  <div className="flex flex-col gap-y-6">
+    {[
+      { id: "kogdias1", role: "Prof. Dr.", name: "Kaio Olimpio Dias", linkedin: "https://www.linkedin.com/in/kaio-olimpio-19729a66/" },
+      { id: "lb", role: "Prof. Dr.", name: "Leonardo Bhering", linkedin: "https://www.linkedin.com/in/leonardo-bhering-aa504338/" },
+      { id: "mt", role: "Head of Outreach BAYER", name: "Masha Trenhaile", linkedin: "https://www.linkedin.com/in/masha-trenhaile-60111a6/" },
+    ].map((person) => (
+      <div key={person.id} className="flex flex-row items-center gap-4">
+        {/* 1. Foto: Agora todas as fotos estarão na mesma linha vertical */}
+        <div className="relative w-14 h-14 flex-shrink-0">
+          <a href={person.linkedin} className='relative block w-full h-full' rel='noopener noreferrer' target='_blank'>
+            <Image
+              src={`/${person.id}.webp`}
+              alt={person.name}
+              fill
+              sizes="56px"
+              style={{ objectFit: 'cover', borderRadius: '50%' }}
+            />
+          </a>
+        </div>
 
-            <div className="grid grid-cols-3 gap-4 items-start justify-items-center">
-              {[
-                { id: "kogdias1", role: "Prof. UFV", name: "Kaio Olimpio Dias", linkedin: "https://www.linkedin.com/in/kaio-olimpio-19729a66/" },
-                { id: "lb", role: "Prof. UFV", name: "Leonardo Bhering", linkedin: "https://www.linkedin.com/in/leonardo-bhering-aa504338/" },
-                { id: "mt", role: "Head of Outreach BAYER", name: "Masha Trenhaile", linkedin: "https://www.linkedin.com/in/masha-trenhaile-60111a6/" },
-              ].map((person) => (
-                <div key={person.id} className="flex flex-col items-center text-center gap-2">
-                  {/* Imagem */}
-                  <div className="relative w-16 h-16">
-                    <a href={person.linkedin} className='relative block w-full h-full' rel='noopener noreferrer' target='_blank'>
-                      <Image
-                        src={`/${person.id}.webp`}
-                        alt={person.name}
-                        fill
-                        sizes="64px"
-                        style={{ objectFit: 'cover', borderRadius: '50%' }}
-                      />
-                    </a>
-                  </div>
-                  {/* Texto */}
-                  <div className="text-[10px] leading-tight w-20">
-                    <strong>{person.role}</strong>
-                    <p>{person.name}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* 2. Texto: Alinhado à esquerda em relação à foto */}
+        <div className="flex flex-col justify-center text-[12px] leading-tight">
+          <strong className="whitespace-nowrap">{person.role}</strong>
+          <p className="text-gray-700 whitespace-nowrap">{person.name}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
           </div>
         </div>
       </section>
       <section className='mb-6 text-justify flex flex-col'>
-        <span className='mb-6'>{t.history1}</span>
+        <span >{t.history1}</span>
+        <span className='mb-6'> {t.history2}</span>
         <div className='flex justify-evenly'>
           <div className='relative w-36 h-36'>
             <Image
@@ -121,7 +128,7 @@ export default async function Home({ params }: { params: { lang: 'pt' | 'en' } }
             </Image>
           </div>
         </div>
-        <span className='mb-4 mt-4'>{t.history2}</span>
+        <span className='mb-4 mt-4'>{t.history3}</span>
 
       </section>
 

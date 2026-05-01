@@ -13,7 +13,7 @@ const dict = {
     title: "REGISTRATION & CONTENT",
     restrictedArea: "Restricted Area!",
     accessButton: "ACCESS CONTENT",
-    registrationInformation:"Registration is limited and subject to a selection process. Please ensure you provide thoughtful responses, as your answers will play a key role in our evaluation of candidates.",
+    registrationInformation:"Positions are limited and subject to a selection process. Please provide thoughtful responses, as they will be considered in our evaluation of candidates.",
     registrationInformationTitle:"IMPORTANT"
   }
 };
@@ -45,7 +45,7 @@ export default async function JoinPage({ params }: { params: { lang: 'pt' | 'en'
       <div className="border border-black p-8 text-center bg-gray-50">
         <h2 className="mb-4 font-bold uppercase">{t.restrictedArea}</h2>
         <a 
-          href="#" 
+          href= {`/${lang}/login`}
           className="inline-block bg-red-600 text-white px-6 py-3 hover:bg-gray-800 transition-colors"
         >
           {t.accessButton}
