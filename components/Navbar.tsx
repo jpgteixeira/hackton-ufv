@@ -40,7 +40,7 @@ export default function Navbar() {
 
           <div className="relative w-24 h-12">
             <a href="https://www.bayer.com.br/pt/" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
-              <Image src="/logos/logo_bayer.webp" alt="Logo Bayer" fill sizes="96px" style={{ objectFit: 'contain' }} />
+              <Image src="/logos/logo-bayer.webp" alt="Logo Bayer" fill sizes="96px" style={{ objectFit: 'contain' }} />
             </a>
           </div>
         </div>

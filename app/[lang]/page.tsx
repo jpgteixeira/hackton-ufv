@@ -183,8 +183,8 @@ export default async function Home({ params }: { params: { lang: 'pt' | 'en' } }
       {/* Partners */}
       <section className='mt-15 flex flex-col w-full justify-between items-center'>
         <span className='mb-4 font-bold uppercase text-xl'>{t.partners}</span>
-        <div className="flex flex-col md:flex-row justify-evenly flex-grow ">
-          {["ppg", "ppggm", "tecnoparq", "genmelhor", "ccb", "cca"].map((logoNum) => (
+        <div className="grid grid-cols-2 justify-items-center md:flex md:flex-row md:justify-evenly md:flex-grow ">
+          {["ufv","idata","bayer","ppg", "ppggm", "tecnoparq", "genmelhor", "ccb", "cca"].map((logoNum) => (
             <div key={logoNum} className="relative w-24 h-24">
               <Image
                 src={`/logos/logo-${logoNum}.webp`}

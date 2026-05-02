@@ -41,16 +41,6 @@ export default async function JoinPage({ params }: { params: { lang: 'pt' | 'en'
           title="Registration Form"
         ></iframe>
       </div>
-
-      <div className="border border-black p-8 text-center bg-gray-50">
-        <h2 className="mb-4 font-bold uppercase">{t.restrictedArea}</h2>
-        <a 
-          href= {`/${lang}/login`}
-          className="inline-block bg-red-600 text-white px-6 py-3 hover:bg-gray-800 transition-colors"
-        >
-          {t.accessButton}
-        </a>
-      </div>
     </main>
   );
 }
